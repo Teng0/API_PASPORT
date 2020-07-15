@@ -1,0 +1,13 @@
+composer require laravel/passport
+
+php artisan migrate
+
+php artisan passport:install
+
+php artisan make:model CEO -m
+
+php artisan make:controller API/AuthController
+php artisan make:controller API/CEOController --api --model=CEO
+
+
+php artisan make:resource CEOResource
